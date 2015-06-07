@@ -132,6 +132,7 @@ class AudioAnalysis(object):
                         self.pyechonest_track.get_analysis()
                     elif len(initializer) == 32:
                         # it's an md5
+                        self.pyechonest_track = track.track_from_md5(initializer)
                         self.pyechonest_track.get_analysis()
             else:
                 assert(filetype is not None)
